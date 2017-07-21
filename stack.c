@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<stdlib>
+#include<stdlib.h>
 #define MAX_SIZE 10
 
 int stack[MAX_SIZE],top=-1;
