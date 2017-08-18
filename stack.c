@@ -27,8 +27,8 @@ return stack[top];
 }
 
 void push(int e)
- int e;
-	if(!isfull())
+{
+ 	if(!isfull())
 	{
 	top++;
 	stack[top]=e;
@@ -56,10 +56,10 @@ void pop()
 }
 
 int main()	
-{
+ {
 	int choice,e;
 	do{
-		printf(" enter your choice:\n 1.peek\n 2.push\n 3.pop\n 4.exit\n");
+		printf("\nenter your choice:\n 1.peek\n 2.push\n 3.pop\n 4.exit\n");
 		scanf("%d",&choice);
 		switch(choice)
 		{
@@ -68,9 +68,8 @@ int main()
 					break;
 			case 2:
 					printf("\nEnter the elment to be inserted: ");
-				scanf("%d",&e);
-				push(e);//call push function
-					push();
+					scanf("%d",&e);
+					push(e);//call push function
 					break;
 			case 3:
 					pop();
