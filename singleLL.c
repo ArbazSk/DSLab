@@ -53,7 +53,7 @@ void insend(node **q,int no)
 	printf(*q);
 }
 
-voidinsafter(npode *q, int no)
+void insafter(node *q, int no)
 {
 	int loc,k;
 	node *temp,*ptr,*old;
@@ -61,7 +61,11 @@ voidinsafter(npode *q, int no)
 	ptr=(*node)malloc(sizeof(node*));
 	ptr->data=no;
 	printf("\n enter location where the no.is to be inserted: \n");
-	SCANF("%d",&loc);
+	scanf("%d",&loc);
+	if(loc==1)
+	{
+		printf("\n PLease Enter no at Begining  \n");
+	}
 	for(k=1;k<loc;k++)
 	{
 		if(temp==NULL)
@@ -90,7 +94,7 @@ void del(node **q,int no)
 	     {
 			 f=1;
 			 if(temp==*q)
-			     *q=temp=>next;
+			     *q=temp->next;
 			  else
 			     old->next=temp->next;
 			  free(temp);
@@ -110,7 +114,7 @@ void del(node **q,int no)
 	printf(*q);
 }
 
-voiud traverse (node*q)
+void traverse (node*q)
 {
 	printf("\n TRAVERSING LINKLIST  \n");
 	printf(q);
@@ -144,12 +148,12 @@ int main()
 		printf("\n 2-DELETION \n");
 		printf("\n 3-TRAVERSE \n");
 		printf("\n 4-EXIT \n");
-		SCANF("%d",&j);
+		scanf("%d",&j);
 		switch(j)
 		{
 			case 1:
 			printf("\nENTER THE NUMBER TO BE INSERTED:  \n");
-			scanf("%d",&no);
+			scanf("%d",&n);
 			printf("\n ENTER 1 TO INSERT AT THE BEGINING \n");
 			printf("\n ENTER 2 TO INSERT AT THE END \n");
 			printf("\n ENTER 3 TO INSERT AT A SPECIFIED LOCATION \n");
@@ -157,13 +161,13 @@ int main()
 			switch(c)
 			{
 				case 1: 
-					insbeg(&start,no);
+					insbeg(&start,n);
 					break;
 				case 2:
-					insend(&start,no);
+					insend(&start,n);
 					break;
 				case 3:
-					insafter(start,no);
+					insafter(start,n);
 					break;
 				default:
 					printf("\n INVALID CHOICE. \n");
@@ -171,8 +175,8 @@ int main()
 			break;
 			case 2:
 				printf("\n ENTER THE NUMBER TO BE DELETED \n");
-				scanf("%d",&no);
-				del(&start,no);
+				scanf("%d",&n);
+				del(&start,n);
 				break;
 			case 3:
 				traverse(start); // start is same as HEAD

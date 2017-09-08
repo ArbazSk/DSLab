@@ -1,3 +1,10 @@
+/*
+ * NAME   :- SHAIKH MOHD ARBAZ RASHID
+ * ROLL NO:- 16CO54
+ * TOPIC  :- IMPLEMENTATION OF STACK
+ * */
+
+
 #include<stdio.h>
 #include<stdlib.h>
 #define MAX_SIZE 10
@@ -59,7 +66,7 @@ int main()
  {
 	int choice,e;
 	do{
-		printf("\nenter your choice:\n 1.peek\n 2.push\n 3.pop\n 4.exit\n");
+		printf("\nEnter your choice:\n 1.peek\n 2.push\n 3.pop\n 4.exit\n");
 		scanf("%d",&choice);
 		switch(choice)
 		{
@@ -72,7 +79,7 @@ int main()
 					push(e);//call push function
 					break;
 			case 3:
-					pop();
+					pop();  //call pop function
 					break;
 			case 4:
 					exit(0);
@@ -84,4 +91,8 @@ int main()
 	}while(1);
 	return 0;
 }
-					
+/* OUTPUT:-
+ * 
+ * 
+ * 
+ * */		
