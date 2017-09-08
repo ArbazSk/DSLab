@@ -36,13 +36,13 @@ void insbeg(node **q,int no)
 	}
 	*q=ptr;
 	printf("\n ELEMENT OF LINKLIST AFTER INSERTION \n");
-	printf(&q);
+	print(*q);
 }
 
 void insend(node **q,int no)
 {
 	node *ptr,*temp;
-	ptr=(*node)malloc(sizeof(node));
+	ptr=(node*)malloc(sizeof(node));
 	ptr->data=no;
 	ptr->next=NULL;
 	temp=*q;
