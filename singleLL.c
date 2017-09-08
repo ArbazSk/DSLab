@@ -110,7 +110,7 @@ void del(node **q,int no)
 	printf(*q);
 }
 
-voiud traverse(node*q)
+voiud traverse (node*q)
 {
 	printf("\n TRAVERSING LINKLIST  \n");
 	printf(q);
